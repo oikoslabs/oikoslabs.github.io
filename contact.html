@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Επικοινωνία · Oikos Labs</title>
+  <meta name="description" content="Η Oikos Labs φτιάχνει απλές εφαρμογές για το σπίτι, με σεβασμό στο απόρρητο.">
+  <meta name="theme-color" content="#f5f6f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121a16" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="icons/icon.svg" width="40" height="40" alt="">Oikos Labs</a>
+      <nav aria-label="Κύρια πλοήγηση">
+        <a href="index.html">Αρχική</a>
+        <a href="privacy.html">Απόρρητο</a>
+        <a href="contact.html" aria-current="page">Επικοινωνία</a>
+      </nav>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Αλλαγή θέματος">◐</button>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <p class="eyebrow">Επικοινωνία</p>
+    <h1>Πώς να μας βρεις</h1>
+    <p class="lede">Γράψε μας με email ή ακολούθησε τα επίσημα κανάλια της Σπιτοθήκης.</p>
+    <ul class="contact-list card">
+      <li>Email: <a href="mailto:oikoslabs.apps@gmail.com">oikoslabs.apps@gmail.com</a></li>
+      <li>Facebook: <a href="https://www.facebook.com/share/19h5cYaZKc/" rel="noopener" target="_blank">Σπιτοθήκη στο Facebook</a></li>
+      <li>Telegram: <a href="https://t.me/spitothiki" rel="noopener" target="_blank">t.me/spitothiki</a></li>
+      <li>TikTok: <a href="https://www.tiktok.com/@spitothikiapp" rel="noopener" target="_blank">@spitothikiapp</a></li>
+    </ul>
+
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <p>© Oikos Labs</p>
+      <nav aria-label="Υποσέλιδο">
+        <a href="privacy.html">Απόρρητο</a>
+        · <a href="contact.html">Επικοινωνία</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var key = 'oikoslabs:theme';
+      var root = document.documentElement;
+      try {
+        var saved = localStorage.getItem(key);
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light'
+            : root.getAttribute('data-theme') === 'light' ? 'dark'
+            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem(key, next); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

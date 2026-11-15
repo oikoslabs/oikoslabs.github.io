@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Απόρρητο · Oikos Labs</title>
+  <meta name="description" content="Η Oikos Labs φτιάχνει απλές εφαρμογές για το σπίτι, με σεβασμό στο απόρρητο.">
+  <meta name="theme-color" content="#f5f6f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121a16" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="icons/icon.svg" width="40" height="40" alt="">Oikos Labs</a>
+      <nav aria-label="Κύρια πλοήγηση">
+        <a href="index.html">Αρχική</a>
+        <a href="privacy.html" aria-current="page">Απόρρητο</a>
+        <a href="contact.html">Επικοινωνία</a>
+      </nav>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Αλλαγή θέματος">◐</button>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <p class="eyebrow">Απόρρητο</p>
+    <h1>Πολιτική απορρήτου</h1>
+    <div class="prose">
+      <p>Η πλήρης πολιτική απορρήτου της Σπιτοθήκης είναι στη σελίδα της εφαρμογής: <a href="https://spitothiki.web.app/privacy.html">spitothiki.web.app/privacy.html</a>.</p>
+      <p>Σύμφωνα με αυτή την πολιτική:</p>
+      <ul>
+        <li>Η Σπιτοθήκη είναι δωρεάν εφαρμογή για το απόθεμα, τις αγορές και τα έξοδα του σπιτιού.</li>
+        <li>Δεν έχει διαφημίσεις, δεν πουλάμε δεδομένα και δεν χρησιμοποιούμε cookies παρακολούθησης.</li>
+        <li>Απόθεμα, λίστες, έξοδα και ρυθμίσεις αποθηκεύονται στη συσκευή σου. Αν δεν συνδεθείς, δεν φεύγουν από εκεί. Η εφαρμογή δουλεύει και χωρίς λογαριασμό.</li>
+        <li>Αν συνδεθείς (Google ή email), τα δεδομένα συγχρονίζονται στο Firebase και τα βλέπουν μόνο τα μέλη του νοικοκυριού σου.</li>
+        <li>Χρησιμοποιείται ανώνυμη μέτρηση χωρίς cookies (Cloudflare Web Analytics) και ανώνυμη μέτρηση πηγής επισκέψεων, χωρίς προσωπικά στοιχεία.</li>
+      </ul>
+      <p>Για ερωτήσεις ή αίτημα διαγραφής λογαριασμού, γράψε στο <a href="mailto:oikoslabs.apps@gmail.com">oikoslabs.apps@gmail.com</a>.</p>
+    </div>
+
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <p>© Oikos Labs</p>
+      <nav aria-label="Υποσέλιδο">
+        <a href="privacy.html">Απόρρητο</a>
+        · <a href="contact.html">Επικοινωνία</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var key = 'oikoslabs:theme';
+      var root = document.documentElement;
+      try {
+        var saved = localStorage.getItem(key);
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light'
+            : root.getAttribute('data-theme') === 'light' ? 'dark'
+            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem(key, next); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

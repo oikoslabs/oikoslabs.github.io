@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oikos Labs</title>
+  <meta name="description" content="Η Oikos Labs φτιάχνει απλές εφαρμογές για το σπίτι, με σεβασμό στο απόρρητο.">
+  <meta name="theme-color" content="#f5f6f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121a16" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="icons/icon.svg" width="40" height="40" alt="">Oikos Labs</a>
+      <nav aria-label="Κύρια πλοήγηση">
+        <a href="index.html" aria-current="page">Αρχική</a>
+        <a href="privacy.html">Απόρρητο</a>
+        <a href="contact.html">Επικοινωνία</a>
+      </nav>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Αλλαγή θέματος">◐</button>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <p class="eyebrow">Oikos Labs</p>
+    <h1>Απλές εφαρμογές για το σπίτι</h1>
+    <p class="lede">Η Oikos Labs φτιάχνει απλές εφαρμογές για το σπίτι, με σεβασμό στο απόρρητο. Χωρίς διαφημίσεις και χωρίς πώληση δεδομένων.</p>
+    <article class="card app-card">
+      <img class="mark" src="icons/icon.svg" width="72" height="72" alt="">
+      <div>
+        <h2>Σπιτοθήκη</h2>
+        <p>Δωρεάν εφαρμογή για το απόθεμα, τις αγορές και τα έξοδα του σπιτιού. Δουλεύει και χωρίς λογαριασμό. Δεν έχει διαφημίσεις και δεν πουλάμε δεδομένα.</p>
+        <div class="actions">
+          <a class="button button-primary" href="https://spitothiki.web.app/?src=oikoslabs">Άνοιξε τη Σπιτοθήκη</a>
+        </div>
+      </div>
+    </article>
+
+    <section class="shots" aria-labelledby="shots-title">
+      <h2 id="shots-title">Η εφαρμογή</h2>
+      <p class="section-lead">Ενδεικτικές οθόνες με δοκιμαστικά δεδομένα — χωρίς λογαριασμό.</p>
+      <ul class="shot-grid">
+        <li>
+          <figure>
+            <img src="shots/home.webp" alt="Αρχική οθόνη της Σπιτοθήκης με προϋπολογισμό μήνα, ημερολόγιο και έξοδα" width="390" height="844">
+            <figcaption>Αρχική</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="shots/receipts.webp" alt="Απόδειξη από σούπερ μάρκετ με τα είδη και τα ποσά" width="390" height="844">
+            <figcaption>Αποδείξεις</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="shots/expiries.webp" alt="Προϊόντα στο απόθεμα που λήγουν μέσα στις επόμενες ημέρες" width="390" height="844">
+            <figcaption>Λήξεις</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="shots/calendar.webp" alt="Ημερολόγιο νοικοκυριού με λήξη προϊόντος και λογαριασμό ρεύματος" width="390" height="844">
+            <figcaption>Ημερολόγιο</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">Τι κάνει η Σπιτοθήκη</h2>
+      <ul class="feature-list">
+        <li>Σκανάρεις το QR απόδειξης της ΑΑΔΕ και περνάνε τα είδη και το ποσό.</li>
+        <li>Βλέπεις τι λήγει σύντομα στο απόθεμα.</li>
+        <li>Κρατάς λίστα αγορών και τη μοιράζεσαι με το νοικοκυριό, αν συνδεθείς.</li>
+        <li>Ημερολόγιο νοικοκυριού, με λήξεις, λογαριασμούς και γεγονότα.</li>
+        <li>Μηνιαίος προϋπολογισμός.</li>
+        <li>Εξαγωγή αποδείξεων σε PDF.</li>
+        <li>Συνταγές.</li>
+        <li>Καταγραφή καυσίμων και μετακινήσεων.</li>
+      </ul>
+    </section>
+
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <p>© Oikos Labs</p>
+      <nav aria-label="Υποσέλιδο">
+        <a href="privacy.html">Απόρρητο</a>
+        · <a href="contact.html">Επικοινωνία</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var key = 'oikoslabs:theme';
+      var root = document.documentElement;
+      try {
+        var saved = localStorage.getItem(key);
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light'
+            : root.getAttribute('data-theme') === 'light' ? 'dark'
+            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem(key, next); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
