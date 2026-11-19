@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oikos Labs</title>
+  <meta name="description" content="Oikos Labs builds simple apps for home and work, with respect for your privacy.">
+  <meta name="theme-color" content="#f5f6f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121a16" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+  <link rel="alternate" hreflang="el" href="https://oikoslabs.github.io/">
+  <link rel="alternate" hreflang="en" href="https://oikoslabs.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://oikoslabs.github.io/">
+  <link rel="stylesheet" href="../styles.css?v=7">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="../icons/icon.svg" width="40" height="40" alt="">Oikos Labs</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="spitothiki.html">Spitothiki</a>
+        <a href="monlogistics.html">MonLogistics</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language"><a href="../index.html" lang="el" hreflang="el" title="Ελληνικά">ΕΛ</a><a href="index.html" lang="en" aria-current="true">EN</a></div>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <p class="eyebrow">Oikos Labs</p>
+    <h1>Simple apps for home and work</h1>
+    <p class="lede">Oikos Labs builds simple apps for home and work, with respect for your privacy. No ads and no selling of data.</p>
+
+    <section class="apps" aria-labelledby="apps-title">
+      <h2 id="apps-title">Our apps</h2>
+      <div class="app-grid">
+        <article class="card app-tile">
+          <a class="tile-shot" href="spitothiki.html" tabindex="-1" aria-hidden="true"><img src="../shots/home.webp" alt="" width="390" height="844" loading="lazy"></a>
+          <div class="tile-head">
+            <img class="mark" src="../icons/icon.svg" width="56" height="56" alt="">
+            <div>
+              <p class="eyebrow">For home</p>
+              <h3>Spitothiki</h3>
+            </div>
+          </div>
+          <p>A free app for your household stock, shopping and expenses. Works without an account. The app is in Greek.</p>
+          <div class="actions">
+            <a class="button button-primary" href="spitothiki.html">See Spitothiki</a>
+            <a class="button button-quiet" href="https://spitothiki.web.app/?src=oikoslabs">Open the app</a>
+          </div>
+        </article>
+        <article class="card app-tile">
+          <a class="tile-shot" href="monlogistics.html" tabindex="-1" aria-hidden="true"><img src="../shots/monlogistics/map.webp" alt="" width="1200" height="755" loading="lazy"></a>
+          <div class="tile-head">
+            <img class="mark" src="../icons/monlogistics-icon.png" width="56" height="56" alt="">
+            <div>
+              <p class="eyebrow">For business</p>
+              <h3>MonLogistics WMS</h3>
+            </div>
+          </div>
+          <p>Simple pallet warehouse management from your phone, with expiry dates, shelf locations, picking and QR scanning.</p>
+          <div class="actions">
+            <a class="button button-primary" href="monlogistics.html">See MonLogistics</a>
+            <a class="button button-quiet" href="https://monlogistics-demo.web.app/?src=oikoslabs">Try the demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="principles" aria-labelledby="principles-title">
+      <h2 id="principles-title">How we work</h2>
+      <ul class="principle-list">
+        <li><strong>No ads</strong><span>No advertising inside our apps.</span></li>
+        <li><strong>We don't sell data</strong><span>Your data is not sold to anyone.</span></li>
+        <li><strong>Work from your phone</strong><span>They open in the browser and install like an app.</span></li>
+      </ul>
+    </section>
+
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <p>© Oikos Labs</p>
+      <nav aria-label="Footer">
+        <a href="privacy.html">Privacy</a>
+        · <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var key = 'oikoslabs:theme';
+      var root = document.documentElement;
+      try {
+        var saved = localStorage.getItem(key);
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light'
+            : root.getAttribute('data-theme') === 'light' ? 'dark'
+            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem(key, next); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

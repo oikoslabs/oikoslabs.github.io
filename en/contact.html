@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Oikos Labs</title>
+  <meta name="description" content="Oikos Labs builds simple apps for home and work, with respect for your privacy.">
+  <meta name="theme-color" content="#f5f6f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121a16" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+  <link rel="alternate" hreflang="el" href="https://oikoslabs.github.io/contact.html">
+  <link rel="alternate" hreflang="en" href="https://oikoslabs.github.io/en/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://oikoslabs.github.io/contact.html">
+  <link rel="stylesheet" href="../styles.css?v=7">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="../icons/icon.svg" width="40" height="40" alt="">Oikos Labs</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="spitothiki.html">Spitothiki</a>
+        <a href="monlogistics.html">MonLogistics</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language"><a href="../contact.html" lang="el" hreflang="el" title="Ελληνικά">ΕΛ</a><a href="contact.html" lang="en" aria-current="true">EN</a></div>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>How to reach us</h1>
+    <p class="lede">Write to us by email or follow Spitothiki's official channels.</p>
+    <ul class="contact-list card">
+      <li>Email: <a href="mailto:oikoslabs.apps@gmail.com">oikoslabs.apps@gmail.com</a></li>
+      <li>Facebook: <a href="https://www.facebook.com/share/19h5cYaZKc/" rel="noopener" target="_blank">Spitothiki on Facebook</a></li>
+      <li>Telegram: <a href="https://t.me/spitothiki" rel="noopener" target="_blank">t.me/spitothiki</a></li>
+      <li>TikTok: <a href="https://www.tiktok.com/@spitothikiapp" rel="noopener" target="_blank">@spitothikiapp</a></li>
+    </ul>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <p>© Oikos Labs</p>
+      <nav aria-label="Footer">
+        <a href="privacy.html">Privacy</a>
+        · <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var key = 'oikoslabs:theme';
+      var root = document.documentElement;
+      try {
+        var saved = localStorage.getItem(key);
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light'
+            : root.getAttribute('data-theme') === 'light' ? 'dark'
+            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem(key, next); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

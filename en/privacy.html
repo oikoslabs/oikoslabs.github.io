@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy · Oikos Labs</title>
+  <meta name="description" content="Oikos Labs builds simple apps for home and work, with respect for your privacy.">
+  <meta name="theme-color" content="#f5f6f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121a16" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+  <link rel="alternate" hreflang="el" href="https://oikoslabs.github.io/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://oikoslabs.github.io/en/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://oikoslabs.github.io/privacy.html">
+  <link rel="stylesheet" href="../styles.css?v=7">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="../icons/icon.svg" width="40" height="40" alt="">Oikos Labs</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="spitothiki.html">Spitothiki</a>
+        <a href="monlogistics.html">MonLogistics</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language"><a href="../privacy.html" lang="el" hreflang="el" title="Ελληνικά">ΕΛ</a><a href="privacy.html" lang="en" aria-current="true">EN</a></div>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <p class="eyebrow">Privacy</p>
+    <h1>Privacy policy</h1>
+    <div class="prose">
+      <p>The full privacy policy for Spitothiki is on the app's own page: <a href="https://spitothiki.web.app/privacy.html">spitothiki.web.app/privacy.html</a> (in Greek).</p>
+      <p>According to that policy:</p>
+      <ul>
+        <li>Spitothiki is a free app for your household stock, shopping and expenses.</li>
+        <li>It has no ads, we don't sell data and we don't use tracking cookies.</li>
+        <li>Stock, lists, expenses and settings are stored on your device. If you don't sign in, they never leave it. The app works without an account.</li>
+        <li>If you sign in (Google or email), your data is synced to Firebase and only the members of your household can see it.</li>
+        <li>We use anonymous, cookie-free analytics (Cloudflare Web Analytics) and anonymous measurement of where visits come from, with no personal data.</li>
+      </ul>
+      <h2>MonLogistics WMS</h2>
+      <ul>
+        <li>The demo runs only in your browser with test data and does not send data anywhere.</li>
+        <li>The full app stores warehouse data in Firebase (Google), and only users with an account created by the administrator can see it.</li>
+        <li>Only your sign-in and changes that have not been sent yet are kept on the device.</li>
+      </ul>
+      <p>For questions or to request account deletion, write to <a href="mailto:oikoslabs.apps@gmail.com">oikoslabs.apps@gmail.com</a>.</p>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <p>© Oikos Labs</p>
+      <nav aria-label="Footer">
+        <a href="privacy.html">Privacy</a>
+        · <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var key = 'oikoslabs:theme';
+      var root = document.documentElement;
+      try {
+        var saved = localStorage.getItem(key);
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light'
+            : root.getAttribute('data-theme') === 'light' ? 'dark'
+            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem(key, next); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

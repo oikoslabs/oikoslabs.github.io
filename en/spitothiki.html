@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spitothiki · Oikos Labs</title>
+  <meta name="description" content="Spitothiki: a free app for your household stock, shopping and expenses. Works without an account. The app is in Greek.">
+  <meta name="theme-color" content="#f5f6f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121a16" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+  <link rel="alternate" hreflang="el" href="https://oikoslabs.github.io/spitothiki.html">
+  <link rel="alternate" hreflang="en" href="https://oikoslabs.github.io/en/spitothiki.html">
+  <link rel="alternate" hreflang="x-default" href="https://oikoslabs.github.io/spitothiki.html">
+  <link rel="stylesheet" href="../styles.css?v=7">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="../icons/icon.svg" width="40" height="40" alt="">Oikos Labs</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="spitothiki.html" aria-current="page">Spitothiki</a>
+        <a href="monlogistics.html">MonLogistics</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language"><a href="../spitothiki.html" lang="el" hreflang="el" title="Ελληνικά">ΕΛ</a><a href="spitothiki.html" lang="en" aria-current="true">EN</a></div>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <p class="eyebrow">For home</p>
+    <h1>Spitothiki: your household stock, shopping and expenses in one app</h1>
+    <p class="lede">A free app for your household stock, shopping and expenses. It works without an account. No ads, and we don't sell data.</p>
+    <div class="actions hero-actions">
+      <a class="button button-primary" href="https://spitothiki.web.app/?src=oikoslabs">Open Spitothiki</a>
+    </div>
+    <p class="hero-note">Note: the app itself is in Greek.</p>
+
+    <section class="shots" aria-labelledby="shots-title">
+      <h2 id="shots-title">The app</h2>
+      <p class="section-lead">Sample screens with test data, no account needed. The app interface is in Greek.</p>
+      <ul class="shot-grid">
+        <li>
+          <figure>
+            <img src="../shots/home.webp" alt="Spitothiki home screen with the monthly budget, calendar and expenses" width="390" height="844">
+            <figcaption>Home</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="../shots/receipts.webp" alt="A supermarket receipt with its items and amounts" width="390" height="844">
+            <figcaption>Receipts</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="../shots/expiries.webp" alt="Stock items that expire within the next few days" width="390" height="844">
+            <figcaption>Expiry dates</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="../shots/calendar.webp" alt="Household calendar showing a product expiry and an electricity bill" width="390" height="844">
+            <figcaption>Calendar</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">What Spitothiki does</h2>
+      <ul class="feature-list">
+        <li>Scan the QR code on an AADE receipt (the Greek tax authority) and the items and total are filled in for you.</li>
+        <li>See what is about to expire in your stock.</li>
+        <li>Keep a shopping list and share it with your household, if you sign in.</li>
+        <li>A household calendar with expiry dates, bills and events.</li>
+        <li>A monthly budget.</li>
+        <li>Export receipts to PDF.</li>
+        <li>Recipes.</li>
+        <li>Fuel and trip logging.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <p>© Oikos Labs</p>
+      <nav aria-label="Footer">
+        <a href="privacy.html">Privacy</a>
+        · <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var key = 'oikoslabs:theme';
+      var root = document.documentElement;
+      try {
+        var saved = localStorage.getItem(key);
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light'
+            : root.getAttribute('data-theme') === 'light' ? 'dark'
+            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem(key, next); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
