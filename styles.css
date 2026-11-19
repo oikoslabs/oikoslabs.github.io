@@ -281,6 +281,27 @@ footer nav a { color: var(--muted); }
   .shot-grid-wide { align-items: start; }
 }
 @media (max-width: 560px) {
-  .header-inner nav { order: 3; width: 100%; gap: 0; }
-  .header-inner nav a { padding: 8px 6px; font-size: 14px; }
+  .header-inner nav { order: 3; width: 100%; gap: 0; justify-content: space-between; }
+  .header-inner nav a { padding: 8px 3px; font-size: clamp(10.5px, 3.05vw, 13px); }
 }
+
+/* v6: home overview */
+.apps, .principles { margin-top: 12px; }
+.apps h2, .principles h2 { margin: 0 0 14px; font-size: 22px; letter-spacing: -.02em; }
+.app-grid { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.app-tile { align-content: start; gap: 14px; }
+.app-tile .tile-shot { display: block; aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-soft); }
+.app-tile .tile-shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.tile-head { display: flex; align-items: center; gap: 12px; }
+.tile-head .mark { width: 56px; height: 56px; border-radius: 16px; flex: none; }
+.tile-head .eyebrow { margin: 0 0 2px; }
+.tile-head h3 { margin: 0; font-size: 20px; letter-spacing: -.02em; }
+.app-tile > p { margin: 0; color: var(--muted); }
+.app-tile .actions { margin-top: auto; }
+.principles { margin-top: 36px; }
+.principle-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+@media (min-width: 640px) { .principle-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.principle-list li { padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.principle-list strong { display: block; }
+.principle-list span { color: var(--muted); font-size: 15px; }

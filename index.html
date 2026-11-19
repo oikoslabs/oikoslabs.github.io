@@ -10,7 +10,7 @@
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="icon" href="icons/icon-192.png" sizes="192x192">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
@@ -19,6 +19,7 @@
       <a class="brand" href="index.html"><img src="icons/icon.svg" width="40" height="40" alt="">Oikos Labs</a>
       <nav aria-label="Κύρια πλοήγηση">
         <a href="index.html" aria-current="page">Αρχική</a>
+        <a href="spitothiki.html">Σπιτοθήκη</a>
         <a href="monlogistics.html">MonLogistics</a>
         <a href="privacy.html">Απόρρητο</a>
         <a href="contact.html">Επικοινωνία</a>
@@ -30,70 +31,49 @@
     <p class="eyebrow">Oikos Labs</p>
     <h1>Απλές εφαρμογές για το σπίτι και τη δουλειά</h1>
     <p class="lede">Η Oikos Labs φτιάχνει απλές εφαρμογές για το σπίτι και τη δουλειά, με σεβασμό στο απόρρητο. Χωρίς διαφημίσεις και χωρίς πώληση δεδομένων.</p>
-    <article class="card app-card">
-      <img class="mark" src="icons/icon.svg" width="72" height="72" alt="">
-      <div>
-        <h2>Σπιτοθήκη</h2>
-        <p>Δωρεάν εφαρμογή για το απόθεμα, τις αγορές και τα έξοδα του σπιτιού. Δουλεύει και χωρίς λογαριασμό. Δεν έχει διαφημίσεις και δεν πουλάμε δεδομένα.</p>
-        <div class="actions">
-          <a class="button button-primary" href="https://spitothiki.web.app/?src=oikoslabs">Άνοιξε τη Σπιτοθήκη</a>
-        </div>
-      </div>
-    </article>
-    <article class="card app-card app-card-spaced">
-      <img class="mark" src="icons/monlogistics-icon.png" width="72" height="72" alt="">
-      <div>
-        <p class="eyebrow">Για επιχειρήσεις</p>
-        <h2>MonLogistics WMS</h2>
-        <p>Απλή διαχείριση αποθήκης παλετών από το κινητό: λήξεις, θέσεις ραφιών, picking και σκανάρισμα QR, χωρίς ειδικά scanners. Για μικρές και μεσαίες αποθήκες.</p>
-        <div class="actions">
-          <a class="button button-primary" href="monlogistics.html">Δες το MonLogistics</a>
-        </div>
-      </div>
-    </article>
 
-    <section class="shots" aria-labelledby="shots-title">
-      <h2 id="shots-title">Η Σπιτοθήκη</h2>
-      <p class="section-lead">Ενδεικτικές οθόνες με δοκιμαστικά δεδομένα — χωρίς λογαριασμό.</p>
-      <ul class="shot-grid">
-        <li>
-          <figure>
-            <img src="shots/home.webp" alt="Αρχική οθόνη της Σπιτοθήκης με προϋπολογισμό μήνα, ημερολόγιο και έξοδα" width="390" height="844">
-            <figcaption>Αρχική</figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="shots/receipts.webp" alt="Απόδειξη από σούπερ μάρκετ με τα είδη και τα ποσά" width="390" height="844">
-            <figcaption>Αποδείξεις</figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="shots/expiries.webp" alt="Προϊόντα στο απόθεμα που λήγουν μέσα στις επόμενες ημέρες" width="390" height="844">
-            <figcaption>Λήξεις</figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="shots/calendar.webp" alt="Ημερολόγιο νοικοκυριού με λήξη προϊόντος και λογαριασμό ρεύματος" width="390" height="844">
-            <figcaption>Ημερολόγιο</figcaption>
-          </figure>
-        </li>
-      </ul>
+    <section class="apps" aria-labelledby="apps-title">
+      <h2 id="apps-title">Οι εφαρμογές μας</h2>
+      <div class="app-grid">
+        <article class="card app-tile">
+          <a class="tile-shot" href="spitothiki.html" tabindex="-1" aria-hidden="true"><img src="shots/home.webp" alt="" width="390" height="844" loading="lazy"></a>
+          <div class="tile-head">
+            <img class="mark" src="icons/icon.svg" width="56" height="56" alt="">
+            <div>
+              <p class="eyebrow">Για το σπίτι</p>
+              <h3>Σπιτοθήκη</h3>
+            </div>
+          </div>
+          <p>Δωρεάν εφαρμογή για το απόθεμα, τις αγορές και τα έξοδα του σπιτιού. Δουλεύει και χωρίς λογαριασμό.</p>
+          <div class="actions">
+            <a class="button button-primary" href="spitothiki.html">Δες τη Σπιτοθήκη</a>
+            <a class="button button-quiet" href="https://spitothiki.web.app/?src=oikoslabs">Άνοιξε την εφαρμογή</a>
+          </div>
+        </article>
+        <article class="card app-tile">
+          <a class="tile-shot" href="monlogistics.html" tabindex="-1" aria-hidden="true"><img src="shots/monlogistics/map.webp" alt="" width="1200" height="755" loading="lazy"></a>
+          <div class="tile-head">
+            <img class="mark" src="icons/monlogistics-icon.png" width="56" height="56" alt="">
+            <div>
+              <p class="eyebrow">Για επιχειρήσεις</p>
+              <h3>MonLogistics WMS</h3>
+            </div>
+          </div>
+          <p>Απλή διαχείριση αποθήκης παλετών από το κινητό, με λήξεις, θέσεις ραφιών, picking και σκανάρισμα QR.</p>
+          <div class="actions">
+            <a class="button button-primary" href="monlogistics.html">Δες το MonLogistics</a>
+            <a class="button button-quiet" href="https://monlogistics-demo.web.app/?src=oikoslabs">Δοκίμασε το demo</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="features" aria-labelledby="features-title">
-      <h2 id="features-title">Τι κάνει η Σπιτοθήκη</h2>
-      <ul class="feature-list">
-        <li>Σκανάρεις το QR απόδειξης της ΑΑΔΕ και περνάνε τα είδη και το ποσό.</li>
-        <li>Βλέπεις τι λήγει σύντομα στο απόθεμα.</li>
-        <li>Κρατάς λίστα αγορών και τη μοιράζεσαι με το νοικοκυριό, αν συνδεθείς.</li>
-        <li>Ημερολόγιο νοικοκυριού, με λήξεις, λογαριασμούς και γεγονότα.</li>
-        <li>Μηνιαίος προϋπολογισμός.</li>
-        <li>Εξαγωγή αποδείξεων σε PDF.</li>
-        <li>Συνταγές.</li>
-        <li>Καταγραφή καυσίμων και μετακινήσεων.</li>
+    <section class="principles" aria-labelledby="principles-title">
+      <h2 id="principles-title">Πώς δουλεύουμε</h2>
+      <ul class="principle-list">
+        <li><strong>Χωρίς διαφημίσεις</strong><span>Καμία διαφήμιση μέσα στις εφαρμογές.</span></li>
+        <li><strong>Δεν πουλάμε δεδομένα</strong><span>Τα δεδομένα σου δεν πουλιούνται σε κανέναν.</span></li>
+        <li><strong>Δουλεύουν από το κινητό</strong><span>Ανοίγουν στον browser και εγκαθίστανται σαν εφαρμογή.</span></li>
       </ul>
     </section>
 
