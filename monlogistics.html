@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MonLogistics WMS · Oikos Labs</title>
+  <meta name="description" content="MonLogistics WMS: απλή διαχείριση αποθήκης παλετών από το κινητό, με λήξεις, θέσεις ραφιών, picking και σκανάρισμα QR.">
+  <meta name="theme-color" content="#f5f6f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121a16" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+  <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="icons/icon.svg" width="40" height="40" alt="">Oikos Labs</a>
+      <nav aria-label="Κύρια πλοήγηση">
+        <a href="index.html">Αρχική</a>
+        <a href="monlogistics.html" aria-current="page">MonLogistics</a>
+        <a href="privacy.html">Απόρρητο</a>
+        <a href="contact.html">Επικοινωνία</a>
+      </nav>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Αλλαγή θέματος">◐</button>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <p class="eyebrow">Για επιχειρήσεις</p>
+    <h1>MonLogistics WMS: Απλή διαχείριση αποθήκης παλετών από το κινητό</h1>
+    <p class="lede">Παλέτες, λήξεις, θέσεις ραφιών, picking και σκανάρισμα QR σε μία απλή εφαρμογή, χωρίς ειδικά scanners και χωρίς βαρύ σύστημα αποθήκης.</p>
+    <div class="actions hero-actions">
+      <a class="button button-primary" href="https://monlogistics-demo.web.app/?src=oikoslabs">Δοκίμασε το demo</a>
+      <a class="button button-quiet" href="mailto:oikoslabs.apps@gmail.com?subject=MonLogistics%20WMS">Ζήτησε παρουσίαση</a>
+    </div>
+    <p class="hero-note">Το demo έχει δοκιμαστικά δεδομένα και είναι στα αγγλικά, με επιλογή ΕΛ για ελληνικά.</p>
+
+    <section class="audience" aria-labelledby="audience-title">
+      <h2 id="audience-title">Για ποιον είναι</h2>
+      <ul class="audience-list">
+        <li><strong>Μικρές και μεσαίες αποθήκες</strong><span>που θέλουν τάξη στις παλέτες και στις θέσεις τους, χωρίς μεγάλο σύστημα.</span></li>
+        <li><strong>3PL</strong><span>εταιρείες που αποθηκεύουν εμπορεύματα για λογαριασμό πελατών.</span></li>
+        <li><strong>Διανομείς τροφίμων, ποτών και FMCG</strong><span>με προϊόντα που έχουν ημερομηνία λήξης.</span></li>
+        <li><strong>Όσοι δουλεύουν ακόμα με Excel ή χαρτί</strong><span>και θέλουν να περάσουν σε κάτι πιο οργανωμένο.</span></li>
+      </ul>
+    </section>
+
+    <section class="shots" aria-labelledby="shots-title">
+      <h2 id="shots-title">Η εφαρμογή</h2>
+      <p class="section-lead">Ενδεικτικές οθόνες με δοκιμαστικά δεδομένα. Οι οθόνες του demo είναι στα αγγλικά.</p>
+      <ul class="shot-grid shot-grid-wide">
+        <li>
+          <figure>
+            <img src="shots/monlogistics/pallets.webp" alt="Λίστα παλετών με πελάτη, προϊόντα, θέση στο ράφι και ημερομηνία" width="1200" height="755" loading="lazy">
+            <figcaption>Παλέτες και αναζήτηση</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="shots/monlogistics/map.webp" alt="Χάρτης αποθήκης με θέσεις ραφιών και επισήμανση όσων λήγουν σύντομα" width="1200" height="755" loading="lazy">
+            <figcaption>Χάρτης αποθήκης</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="shots/monlogistics/picking.webp" alt="Οθόνη picking με πρόταση παλέτας με βάση την ημερομηνία λήξης" width="1200" height="755" loading="lazy">
+            <figcaption>Picking με πρόταση FEFO</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="shots/monlogistics/dashboard.webp" alt="Dashboard με συνοπτική εικόνα της αποθήκης" width="1200" height="755" loading="lazy">
+            <figcaption>Dashboard</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="shots/monlogistics/portal.webp" alt="Πύλη πελάτη με το απόθεμα ενός πελάτη" width="1200" height="755" loading="lazy">
+            <figcaption>Πύλη πελάτη</figcaption>
+          </figure>
+        </li>
+        <li class="shot-portrait">
+          <figure>
+            <img src="shots/monlogistics/mobile-map.webp" alt="Ο χάρτης της αποθήκης σε οθόνη κινητού" width="390" height="844" loading="lazy">
+            <figcaption>Στο κινητό</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">Τι κάνει</h2>
+      <ul class="feature-list">
+        <li>Παλέτες με προϊόντα και λήξεις, με επισήμανση όσων λήγουν σύντομα.</li>
+        <li>Θέσεις ραφιών και διαδρόμων και χάρτης αποθήκης.</li>
+        <li>Μετακινήσεις και απογραφή.</li>
+        <li>Αναζήτηση προϊόντος σε όλες τις παλέτες.</li>
+        <li>Εξαγωγές με ιστορικό.</li>
+        <li>Picking με εισαγωγή παραγγελιών από Excel, CSV ή PDF και πρόταση παλέτας με FEFO (πρώτα φεύγει ό,τι λήγει νωρίτερα).</li>
+        <li>Σκανάρισμα QR με την κάμερα του κινητού, χωρίς ειδικά scanners.</li>
+        <li>Εκτύπωση ετικετών QR και λιστών picking.</li>
+        <li>Dashboard.</li>
+        <li>Πύλη πελάτη: ένα ιδιωτικό link όπου ο πελάτης βλέπει μόνο το δικό του απόθεμα.</li>
+        <li>Ρόλοι Διαχειριστής και Υπάλληλος.</li>
+        <li>Συνεχίζει να δουλεύει σε κενά σύνδεσης και στέλνει τις αλλαγές όταν επιστρέψει το ίντερνετ.</li>
+        <li>Εγκαθίσταται σαν εφαρμογή σε κινητό ή PC.</li>
+      </ul>
+    </section>
+
+    <section class="cta-bottom" aria-labelledby="cta-title">
+      <h2 id="cta-title">Δοκίμασέ το</h2>
+      <p class="section-lead" style="margin-left:0">Δες το demo με δοκιμαστικά δεδομένα ή ζήτησε μια σύντομη παρουσίαση.</p>
+      <div class="actions">
+        <a class="button button-primary" href="https://monlogistics-demo.web.app/?src=oikoslabs">Δοκίμασε το demo</a>
+        <a class="button button-quiet" href="mailto:oikoslabs.apps@gmail.com?subject=MonLogistics%20WMS">Ζήτησε παρουσίαση</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <p>© Oikos Labs</p>
+      <nav aria-label="Υποσέλιδο">
+        <a href="privacy.html">Απόρρητο</a>
+        · <a href="contact.html">Επικοινωνία</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var key = 'oikoslabs:theme';
+      var root = document.documentElement;
+      try {
+        var saved = localStorage.getItem(key);
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light'
+            : root.getAttribute('data-theme') === 'light' ? 'dark'
+            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem(key, next); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -262,3 +262,25 @@ footer nav a { color: var(--muted); }
   display: grid;
   place-items: center;
 }
+
+/* v5: MonLogistics page + second app card */
+.app-card-spaced { margin-top: 16px; }
+.app-card .eyebrow { margin: 0 0 4px; }
+.prose h2 { margin: 28px 0 10px; font-size: 22px; letter-spacing: -.02em; }
+.hero-note { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+.hero-actions { margin: 0 0 4px; }
+.audience-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.audience-list li { padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.audience-list strong { display: block; }
+.audience-list span { color: var(--muted); font-size: 15px; }
+.audience, .cta-bottom { margin-top: 36px; }
+.audience h2, .cta-bottom h2 { margin: 0 0 12px; font-size: 22px; letter-spacing: -.02em; }
+.shot-grid-wide img { max-width: 100%; border-radius: 14px; }
+.shot-grid-wide .shot-portrait img { max-width: 200px; }
+@media (min-width: 640px) {
+  .shot-grid-wide { align-items: start; }
+}
+@media (max-width: 560px) {
+  .header-inner nav { order: 3; width: 100%; gap: 0; }
+  .header-inner nav a { padding: 8px 6px; font-size: 14px; }
+}
